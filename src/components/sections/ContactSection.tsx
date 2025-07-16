@@ -28,23 +28,23 @@ export function ContactSection() {
 
     emailjs
       .send(
-        "your_service_id",     // Replace with EmailJS Service ID
-        "your_template_id",    // Replace with EmailJS Template ID
+        "service_xe52xkf",          
+        "template_pmr4pr9",         
         {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
         },
-        "your_public_key"      // Replace with your EmailJS Public Key
+        "bkl6wRBLp-rTml21F"         
       )
       .then(
         () => {
-          setStatus("Message sent successfully!");
+          setStatus("✅ Message sent successfully!");
           setFormData({ name: "", email: "", message: "" });
           setIsSending(false);
         },
         () => {
-          setStatus("Failed to send message. Please try again.");
+          setStatus("❌ Failed to send message. Please try again.");
           setIsSending(false);
         }
       );
@@ -90,6 +90,7 @@ export function ContactSection() {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="glass-button"
+                    required
                   />
                   <Input
                     type="email"
@@ -99,6 +100,7 @@ export function ContactSection() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     className="glass-button"
+                    required
                   />
                   <Textarea
                     placeholder="Your Message"
@@ -108,6 +110,7 @@ export function ContactSection() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     className="glass-button"
+                    required
                   />
                   <Button
                     type="submit"
@@ -117,7 +120,9 @@ export function ContactSection() {
                     <Send className="mr-2 h-5 w-5" />
                     {isSending ? "Sending..." : "Send Message"}
                   </Button>
-                  {status && <p className="text-sm text-center text-muted-foreground">{status}</p>}
+                  {status && (
+                    <p className="text-sm text-center text-muted-foreground">{status}</p>
+                  )}
                 </form>
               </CardContent>
             </Card>
@@ -132,11 +137,10 @@ export function ContactSection() {
           >
             <div className="glass-card p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 gradient-accent bg-clip-text text-transparent">
-                Let's Connect
+                Let’s Connect
               </h3>
               <p className="text-foreground/70 mb-8">
-                I'm always open to discussing new opportunities, collaborations,
-                or just chatting about AI and data science!
+                I'm always open to discussing new opportunities, collaborations, or just chatting about AI and data science!
               </p>
 
               <div className="space-y-4">
@@ -152,11 +156,7 @@ export function ContactSection() {
                 <Button
                   variant="outline"
                   className="glass-button w-full justify-start"
-                  onClick={() =>
-                    window.open("https://linkedin.com/in/kumar-raju-neela", "_blank")
-                  }
-
-
+                  onClick={() => window.open("https://linkedin.com/in/kumar-raju-neela", "_blank")}
                 >
                   <Linkedin className="mr-3 h-5 w-5" />
                   LinkedIn Profile
@@ -165,9 +165,7 @@ export function ContactSection() {
                 <Button
                   variant="outline"
                   className="glass-button w-full justify-start"
-                  onClick={() =>
-                    window.open("https://github.com/KumarRaju1313", "_blank")
-                  }
+                  onClick={() => window.open("https://github.com/KumarRaju1313", "_blank")}
                 >
                   <Github className="mr-3 h-5 w-5" />
                   GitHub Profile
