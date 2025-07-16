@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+/* Futuristic Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Futuristic Light Theme */
+    --background: 240 10% 95%;
+    --foreground: 220 15% 15%;
+
+    --card: 240 10% 98%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 240 10% 98%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 260 100% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 100% 85%;
+    --secondary-foreground: 220 15% 15%;
+
+    --muted: 240 5% 90%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 280 100% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 260 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Futuristic Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(260, 100%, 70%), hsl(280, 100%, 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200, 100%, 85%), hsl(220, 100%, 80%));
+    --gradient-accent: linear-gradient(135deg, hsl(280, 100%, 75%), hsl(300, 100%, 70%));
+    --gradient-bg: linear-gradient(135deg, hsl(240, 10%, 95%), hsl(220, 15%, 92%));
+    
+    --glow-primary: 0 0 20px hsl(260, 100%, 70% / 0.3);
+    --glow-secondary: 0 0 20px hsl(200, 100%, 85% / 0.3);
+    --glow-accent: 0 0 20px hsl(280, 100%, 75% / 0.3);
+    
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    --animation-duration: 0.3s;
+    --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Futuristic Dark Theme */
+    --background: 220 15% 8%;
+    --foreground: 240 10% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 240 10% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 240 10% 95%;
+
+    --primary: 260 100% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 280 100% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 260 100% 70%;
+
+    /* Dark Theme Futuristic Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(260, 100%, 70%), hsl(280, 100%, 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200, 100%, 65%), hsl(220, 100%, 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(280, 100%, 75%), hsl(300, 100%, 70%));
+    --gradient-bg: linear-gradient(135deg, hsl(220, 15%, 8%), hsl(240, 15%, 12%));
+    
+    --glow-primary: 0 0 30px hsl(260, 100%, 70% / 0.5);
+    --glow-secondary: 0 0 30px hsl(200, 100%, 65% / 0.5);
+    --glow-accent: 0 0 30px hsl(280, 100%, 75% / 0.5);
+    
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 260 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 260 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Effects */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    transition: all var(--animation-duration) var(--animation-ease);
+  }
+
+  .glass-button:hover {
+    background: var(--glass-border);
+    box-shadow: var(--glow-primary);
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  /* Animated Elements */
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .typing-animation {
+    overflow: hidden;
+    border-right: 3px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+    }
+    100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.8);
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-cursor {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: hsl(var(--primary));
+    }
+  }
+
+  /* Perspective for 3D effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all var(--animation-duration) var(--animation-ease);
+  }
+}
