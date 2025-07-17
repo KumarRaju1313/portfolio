@@ -46,7 +46,7 @@ export function HeroSection() {
             <div className="relative w-72 h-72">
               <div className="absolute inset-0 rounded-full border-4 border-primary animate-pulse shadow-[0_0_40px_5px_rgba(99,102,241,0.3)] z-0" />
               <img
-                src="/Me1.JPG"
+                src="/Me.jpg"
                 alt="Neela Kumar Raju"
                 className="relative z-10 w-full h-full rounded-full object-cover border-4 border-white shadow-xl"
               />
