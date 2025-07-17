@@ -30,7 +30,7 @@ export function AboutSection() {
       color: "text-green-500",
     },
     {
-      year: "2024-Present",
+      year: "2025-Present",
       title: "Data Science Intern - Algonive",
       description: "Building real projects and growing my skills every day",
       icon: Target,
