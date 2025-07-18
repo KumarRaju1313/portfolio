@@ -19,7 +19,7 @@ export function ProjectsSection() {
         "I wanted to learn how computers can identify the same person from different photos, even when lighting changes or they're at different angles.",
       solution:
         "I trained models using MobileNetV2 and VGG16 on about 32,000 images of 7 different people. Used data augmentation like flipping and blurring to make the models more robust.",
-      metrics: ["1.73s per 100 immages", "7 different people", "32K+ training images"],
+      metrics: ["1.73s per 100 images", "7 different people", "32K+ training images"],
       technologies: ["Python", "TensorFlow", "OpenCV", "MobileNetV2", "VGG16", "NumPy"],
       challenges:
         "Getting it to work when people were partially hidden or lighting was weird. Also making it run fast enough to be actually useful.",
@@ -36,7 +36,7 @@ export function ProjectsSection() {
         "I wanted to build something where you could speak naturally to an AI and it would understand and respond back in voice, not just boring text.",
       solution:
         "Connected Whisper (for understanding speech), Llama 2 (for smart responses), and Pyttsx3 (for speaking back). Getting them to work together smoothly was the real challenge.",
-      metrics: ["Under 3s response time", "Multiple input types", "Natural Conversations", "Works with muc & webcam"],
+      metrics: ["Under 3s response time", "Multiple input types", "Natural Conversations", "Works with mic & webcam"],
       technologies: ["Python", "Whisper", "Llama2", "Pyttsx3", "Google Colab", "Hugging Face"],
       challenges:
         "Making it respond quickly enough to feel like a real conversation. Nobody wants to wait forever for a response!",
