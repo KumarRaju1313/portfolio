@@ -137,7 +137,7 @@ export function ContactSection() {
           >
             <div className="glass-card p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 gradient-accent bg-clip-text text-transparent">
-                Let’s Connect
+                Let's Connect
               </h3>
               <p className="text-foreground/70 mb-8">
                 I'm always open to discussing new opportunities, collaborations, or just chatting about AI and data science!
