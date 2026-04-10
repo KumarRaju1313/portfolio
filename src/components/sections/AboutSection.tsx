@@ -31,8 +31,8 @@ export function AboutSection() {
     },
     {
       year: "2025-Present",
-      title: "Data Science Intern - Algonive",
-      description: "Building real projects and growing my skills every day",
+      title: "Executive - HBL Engineering Limited",
+      description: "Creating Power BI Dashboards, Supporting Project Planning Working in PPC Team.",
       icon: Target,
       color: "text-orange-500",
     },
@@ -83,8 +83,8 @@ export function AboutSection() {
                 I knew I was starting from scratch, but I was determined to learn.
               </p>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Now I'm working as a Data Science Intern at Algonive, and I'm loving every bit of it.
-                I've built projects that can recognize faces, understand speech, and find patterns in data.
+                Now I'm working as a Executive at HBL Engineering Limited, and I'm loving every bit of it.
+                I've Create a Interactive dashboards, trying out daily tasks automate using Power Query and Excel like that.
               </p>
               <p className="text-foreground/80 leading-relaxed">
                 The cool thing is, my finance background actually helps a lot.
