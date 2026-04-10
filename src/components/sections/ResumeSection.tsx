@@ -11,13 +11,13 @@ export function ResumeSection() {
 
   const experience = [
     {
-      role: "Data Science Intern",
-      company: "Algonive",
-      period: "Jul 2025 - Present",
+      role: "Executive",
+      company: "HBL Engineering Limited",
+      period: "Nov 2025 - Present",
       achievements: [
-        "Working on real-world data science projects and learning from industry professionals",
-        "Building machine learning models and data analysis solutions",
-        "Collaborating with teams to deliver data-driven insights",
+        "Creating Power BI dashboards to track project performance and KPIs.",
+        "Analyzing data in Excel and automating reports, improving efficiency by 30–40%.",
+        "Managing project schedules and supported PPC operations with cross-team coordination",
       ],
     },
     {
@@ -43,7 +43,7 @@ export function ResumeSection() {
     {
       role: "Billing Executive",
       company: "KIMS Hospitals",
-      period: "Aug 2019 - Jun 2020",
+      period: "Aug 2019 - Sept 2020",
       achievements: [
         "Managed billing for inpatient and outpatient services",
         "Handled insurance claims and coordinated with medical teams",
